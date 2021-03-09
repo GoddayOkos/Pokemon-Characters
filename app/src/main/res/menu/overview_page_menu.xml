@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/enterGallery"
+        android:title="Enter phone gallery" />
+
+    <item
+        android:id="@+id/exit"
+        android:title="Exit" />
+
+    <item
+        android:id="@+id/filterList"
+        android:icon="@drawable/ic_baseline_filter_list_24"
+        android:title="Filter items"
+        app:showAsAction="always" />
+
+</menu>

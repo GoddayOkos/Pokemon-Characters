@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/overviewFragment">
+
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="dev.decagon.godday.pokemoncharacters.ui.OverviewFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_overview">
+        <action
+            android:id="@+id/action_overviewFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_overviewFragment_to_photoReaderFragment"
+            app:destination="@id/photoReaderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="dev.decagon.godday.pokemoncharacters.ui.DetailFragment"
+        android:label="@string/details_page"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="pokemonCharacter"
+            app:argType="dev.decagon.godday.pokemoncharacters.models.PokemonCharacters" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoReaderFragment"
+        android:name="dev.decagon.godday.pokemoncharacters.ui.PhotoReaderFragment"
+        android:label="@string/photo_reader"
+        tools:layout="@layout/fragment_photo_reader" />
+</navigation>
